@@ -1,56 +1,14 @@
-info:
-  description: Spring Cloud Samples
-  url: https://github.com/spring-cloud-samples
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+ConnectionStrings:
+    DefinitionDB: "{cipher}AQICAHiLTTXq8WAJEh75oD8B37GR/xL7SrLJZtkC5HC0f0B94QH+9bvp1Og7vpiu7IGFv9fjAAABETCCAQ0GCSqGSIb3DQEHBqCB/zCB/AIBADCB9gYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxDa7ITG63QKrCZylECARCAgcgMB60aMoCfVgP3DneSSJ2akG1r1otm67Dqf/F5FfzLwuAAqDAz+IqmZasup8RB09xCEAZEfEG6e7dMlCOnX7mBCpRGbIY1eVzjStqQvIFgHOYPZXSW3xgTqDN9Amh7HYNvqbbF0zFrVO5p7C9iervfU4a5/GbOcG0mNVt0DquA0hRUNVTLyKuHilZPpJm+s6zRPkbPF6rY92OMaZ3R768nqJk1aFLv2hbH+1IW49sW9Ve0rv0Dc7jEbSDgNPUYLq3gNLSFyeQ5vw=="
 
----
-spring:
-  profiles: cloud
-  cloud:
-    config:
-      uri: ${vcap.services.${PREFIX:}configserver.credentials.uri:http://user:password@${PREFIX:}configserver.${application.domain:cfapps.io}}
-oauth2:
-  client:
-    tokenUri: ${vcap.services.${PREFIX:}sso.credentials.tokenUri:}
-    authorizationUri: ${vcap.services.${PREFIX:}sso.credentials.authorizationUri:}
-    clientId: ${vcap.services.${PREFIX:}sso.credentials.clientId:}
-    clientSecret: ${vcap.services.${PREFIX:}sso.credentials.clientSecret:}
-  resource:
-    tokenInfoUri: ${vcap.services.${OAUTH2_RESOURCE_SERVICEID:${oauth2.resource.serviceId:sso}}.credentials.tokenInfoUri:}
-    serviceId: ${PREFIX:}resource
-application:
-  domain: ${APPLICATION_DOMAIN:cfapps.io}
-endpoints:
-  restart: enabled
-eureka:
-  password: password
-  instance:
-    hostname: ${vcap.application.uris[0]:localhost}
-    nonSecurePort: 80
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
-ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
-
----
-spring:
-  profiles: docker
-  cloud:
-    config:
-      uri: http://${CONFIGSERVER_1_PORT_8888_TCP_ADDR:localhost}:8888
-endpoints:
-  restart: enabled
-eureka:
-  instance:
-    nonSecurePort: 80
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_1_PORT_8761_TCP_ADDR:localhost}:8761/eureka/
-
+PingSts:
+    PingBaseUrl: https://qa-trtasso.int.thomson.com
+    SecurityServiceUrl: https://dev2.onesourcetax.com/dev2/home-security
+    LoneStarUserService: https://dev2.onesourcetax.com/dev2/home-userservice
+    StsAgentText: "{cipher}AQICAHiLTTXq8WAJEh75oD8B37GR/xL7SrLJZtkC5HC0f0B94QE8CBReFc5+8cLiS0dRDhe2AAABRzCCAUMGCSqGSIb3DQEHBqCCATQwggEwAgEAMIIBKQYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAytcqvqYls7EXR2U6gCARCAgfvd3dQm567jjh3mzl41ayFZjevzb+hZWgiBwnopWHVO3gXoj4wfE5QFh+Msu4aEf9UiRpSpM9kuAAylGwCQKVm1zrj24pIcz2Rp37wA8Ec0V3UdNojvz/yyTbS82zzJM+jqrgQtw0vhvGi3XlJ0dDp4wSpLDkmnGnnWzx6J/G1AHzAVKMPWCHj0kAeuH1z0MMKwq3WxqF68FND8jErZNzIhrrOqCHF+7P2XTf0n5ESMwmeYUgaureDasVZqg2dxqeX65CPVZuQUU3E4wt2lD9E6vt+DAGECg6PrSZb92HsXKQqotx4Ud4yehWxfOVZ9gANqaotAwjamMd82vA=="
+    StsUsername: "{cipher}AQICAHiLTTXq8WAJEh75oD8B37GR/xL7SrLJZtkC5HC0f0B94QGS46SjxtinjXbY3oAKDvL5AAAAbjBsBgkqhkiG9w0BBwagXzBdAgEAMFgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMSkRq53nhsYVQkVtQAgEQgCuxQi+ewcA9jiY+/50jCvq+Npw/tNYbtcZjWWqXsMOMqXK7fxadBNmdQOeY"
+    StsPassword: "{cipher}AQICAHiLTTXq8WAJEh75oD8B37GR/xL7SrLJZtkC5HC0f0B94QH9YTKqz9laSul37P8a3Tz9AAAAczBxBgkqhkiG9w0BBwagZDBiAgEAMF0GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMPOs56oVdxHS7CfiaAgEQgDA6r50o5UUyPE/huF4vgnruOt8tDzjA9jnzIG112XzNn3lv6opKEye+t0XPtvVwSxY="
+    GlobalOrgagnizationName: OneSource
+    
+MiscellaneousConfig:    
+    UseSwagger: true
