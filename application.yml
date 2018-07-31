@@ -1,5 +1,5 @@
 ConnectionStrings:
-    DefinitionDB:UserID
+    DefinitionDB:"User ID=wf_audit_rw_usr;Password=p@ssw0rd;Host=ngwf-dev-audit.c69sniltamfr.us-east-1.rds.amazonaws.com;Port=5432;Database=wf_audit_v1; Pooling=true; Maximum Pool Size=300;"
 
 PingSts:
     PingBaseUrl: https://qa-trtasso.int.thomson.com
