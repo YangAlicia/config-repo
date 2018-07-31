@@ -1,5 +1,5 @@
 ConnectionStrings:
-    DefinitionDB: "User ID=haha;Password=haha;Host=test;Port=5432;Database=test; Pooling=true; Maximum Pool Size=150;"
+    DefinitionDB: User ID=haha;Password=haha;Host=test;Port=5432;Database=test; Pooling=true; Maximum Pool Size=150;
 PingSts:
     PingBaseUrl: https://qa-trtasso.int.thomson.com
     SecurityServiceUrl: https://dev2.onesourcetax.com/dev2/home-security
