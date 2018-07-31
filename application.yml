@@ -1,6 +1,5 @@
 ConnectionStrings:
-    DefinitionDB: {cipher}AQICAHiLTTXq8WAJEh75oD8B37GR/xL7SrLJZtkC5HC0f0B94QH+9bvp1Og7vpiu7IGFv9fjAAABETCCAQ0GCSqGSIb3DQEHBqCB/zCB/AIBADCB9gYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxDa7ITG63QKrCZylECARCAgcgMB60aMoCfVgP3DneSSJ2akG1r1otm67Dqf/F5FfzLwuAAqDAz+IqmZasup8RB09xCEAZEfEG6e7dMlCOnX7mBCpRGbIY1eVzjStqQvIFgHOYPZXSW3xgTqDN9Amh7HYNvqbbF0zFrVO5p7C9iervfU4a5/GbOcG0mNVt0DquA0hRUNVTLyKuHilZPpJm+s6zRPkbPF6rY92OMaZ3R768nqJk1aFLv2hbH+1IW49sW9Ve0rv0Dc7jEbSDgNPUYLq3gNLSFyeQ5vw==
-
+    DefinitionDB: "User ID=haha;Password=haha;Host=test;Port=5432;Database=test; Pooling=true; Maximum Pool Size=150;"
 PingSts:
     PingBaseUrl: https://qa-trtasso.int.thomson.com
     SecurityServiceUrl: https://dev2.onesourcetax.com/dev2/home-security
